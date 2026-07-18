@@ -577,9 +577,9 @@ trait Translatable
         $table = $model->getTable();
         $morph = $this->getMorphClass();
         $local = $this->getTable();
+        $localKey = $this->getKeyName();
 
         // Join
-        $localKey = $model->getKeyName();
         $query->leftJoin($table, function ($join) use ($localKey, $locale, $morph, $local, $table) {
             $join->on("{$table}.model_id", '=', "{$local}.{$localKey}")
                 ->where("{$table}.model_type", '=', $morph)
