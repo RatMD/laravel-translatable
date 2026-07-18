@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Rat\Translatable\Collections\Translation as MongoDBTranslation;
 use Rat\Translatable\Models\Translation;
 
+/**
+ * @property-read array<string, array<string, mixed>> $localizations
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Database\Eloquent\Model> $translations
+ * @mixin \Illuminate\Database\Eloquent\Model
+ */
 trait Translatable
 {
     /**
@@ -431,7 +436,7 @@ trait Translatable
 
     /**
      * Accessor: Return all localizations for the model as an array.
-     * @return array
+     * @return Attribute<array, never>
      */
     public function localizations(): Attribute
     {

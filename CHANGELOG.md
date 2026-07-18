@@ -3,6 +3,7 @@ rat.md/laravel-translatable / Changelog
 
 ## Version 0.1.3 (Beta)
 - Add: Support for Laravel 13.
+- Add: PHPDoc Typings.
 - Fix: Used wrong primary key name on `scopeOrderByLocale()`.
 
 ## Version 0.1.2 (Beta)
